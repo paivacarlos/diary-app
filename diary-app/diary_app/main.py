@@ -10,9 +10,5 @@ async def root():
 
 @app.post("/create-fact")
 async def create_fact(new_fact: Create_Fact_Diary):
-    response_body = {
-        "message": "Fact Created with success!",
-        "fact": new_fact
-    }
+    response_body = new_fact
     return response_body
-
