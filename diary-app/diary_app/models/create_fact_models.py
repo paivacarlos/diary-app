@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-class Create_Fact_Diary(BaseModel):
+class Create_Fact(BaseModel):
     title: str
     city: str
     transport_ticket_total_value: float
