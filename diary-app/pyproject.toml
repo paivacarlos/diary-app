@@ -8,6 +8,8 @@ packages = [{include = "diary_app"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+ormar = {extras = ["sqlite"], version = "^0.12.0"}
+db-sqlite3 = "^0.0.1"
 
 
 [tool.poetry.group.test.dependencies]

@@ -1,4 +1,6 @@
 from pydantic import BaseModel
+import sys
+sys.path.append("create_fact_models.py")
 
 class Create_Fact(BaseModel):
     title: str
