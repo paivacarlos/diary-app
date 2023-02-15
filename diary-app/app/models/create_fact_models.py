@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
+
 class Create_Fact(BaseModel):
     title: str
     city: str
