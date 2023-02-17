@@ -1,10 +1,11 @@
 from fastapi import APIRouter
 
 from models.create_fact_models import Create_Fact
+from database.database import database
 
 router = APIRouter()
 
-database = []
+db = database
 
 
 @router.post("/")
