@@ -1,3 +1,5 @@
+import uuid
+
 from fastapi import APIRouter
 
 from models.create_fact_models import Create_Fact
@@ -10,6 +12,9 @@ db = database
 
 @router.post("/")
 async def create_fact(new_fact: Create_Fact):
-    database.append(new_fact)
-    response_body = new_fact
+    db.append({
+        'id': uuid.uuid4(),
+        'data': new_fact
+    })
+    response_body = db[-1]
     return response_body
